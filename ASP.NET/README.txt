@@ -60,3 +60,25 @@ MVC vs Web API
 4. MVC cannot create RESTful services
    Web API is meant to create RESTful services
 
+
+FAQ
+--------------------------
+
+1. What are the advantages of using REST in Web API ?
+REST makes less data transfers between client and server, which makes it ideal for use in mobile apps. Web API supports HTTP protocol thereby it reintroduces the od way of HTTP verbs for communication.
+
+2. Can we unit test Web API?
+Yes, we can, using Fiddler tool. Steps: Compose Tab -> Enter Request Headers -> Enter the Request Body and execute
+
+3. What is the difference between MVC Routing and Web API routing?
+In Web API pattern, we can find "api/" at the beginning, which makes it distinct from MVC routing. Also, "action" parameter is not mandatory in Web API but it can be part of routing.
+
+4. How can we handle errors in Web API?
+Below classes can be used for error handling:
+ - HttpResponseException
+ - Exception filters
+ - Registering Exception Filters
+ - HttpError
+ 
+5. Explain Authentication in Web API
+Web API authen
