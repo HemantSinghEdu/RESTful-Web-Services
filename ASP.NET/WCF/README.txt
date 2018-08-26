@@ -1,5 +1,8 @@
 WCF REST - Windows Communication Foundation
 ------------------------------------------
+Sample WCF service creation at: https://www.youtube.com/watch?v=O6-abrmrLzI&list=PL_vG5HPso38MvDoV1zOfwtoTzkBQosHxJ
+Login with edu email.
+------------------------------------------
 
 WCF REST helps us to communicate on cross platform application and exchange data in JSON or XML format with the help of GET, POST, PUT, and DELETE methods of HTTP protocol
 
