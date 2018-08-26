@@ -1,5 +1,5 @@
-WCF - Windows Communication Foundation
----------------------------------------
+WCF REST - Windows Communication Foundation
+------------------------------------------
 
 WCF REST helps us to communicate on cross platform application and exchange data in JSON or XML format with the help of GET, POST, PUT, and DELETE methods of HTTP protocol
 
@@ -40,6 +40,7 @@ Endpoints
  10. NetTcpBinding    : Communication among WCF applications across computers, supports duplex contracts and transactions.
 
 - Contracts : Contracts are a collection of attributes that give special meanings to the methods and classes. Contracts are a collection of the following:
+  1. Service Contract 	2. Operation Contract	3. Data Contract	4. Message Contract	5. Fault Contract
 
   1. Service Contract	: a definition of the interface for the service. 
      Example:
