@@ -25,8 +25,8 @@ namespace WebApi.Auth.Controllers
         }
 
         [HttpPost]
-        [Route("login")]
-        public async Task<IActionResult> Login([FromBody] LoginUser model)
+        [Route("token")]
+        public async Task<IActionResult> CreateToken([FromBody] LoginUser model)
         {
             var user = await userManager.FindByNameAsync(model.UserName);
             if(user!=null && await userManager.CheckPasswordAsync(user, model.Password))
@@ -52,6 +52,35 @@ namespace WebApi.Auth.Controllers
                 });
             }
             return Unauthorized();
+        }
+
+        [HttpPost]
+        [Route("register")]
+        public async Task<IActionResult> Register([FromBody] RegisterUser model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var user = new ApplicationUser
+            {
+                UserName = model.UserName,
+                Email = model.Email
+            };
+
+            var result = await userManager.CreateAsync(user, model.Password);
+
+            if (result.Succeeded)
+            {
+                return Ok(result);
+            }
+
+            foreach(var error in result.Errors)
+            {
+                ModelState.AddModelError("error", error.Description);
+            }
+            return BadRequest();
         }
     }
 }
